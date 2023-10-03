@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F0DAAEE2ACB423400914CBF /* SummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DAAED2ACB423400914CBF /* SummaryCard.swift */; };
+		3F0DAAF02ACB4C1F00914CBF /* BuildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DAAEF2ACB4C1F00914CBF /* BuildViewModel.swift */; };
+		3F0DAAF22ACB541600914CBF /* BuildModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DAAF12ACB541600914CBF /* BuildModel.swift */; };
+		3FFF80F82ACAC2DF00B554C4 /* PelagianCCRChecklistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF80F72ACAC2DF00B554C4 /* PelagianCCRChecklistApp.swift */; };
+		3FFF80FA2ACAC2DF00B554C4 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF80F92ACAC2DF00B554C4 /* MainTabView.swift */; };
+		3FFF80FC2ACAC2E100B554C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF80FB2ACAC2E100B554C4 /* Assets.xcassets */; };
+		3FFF80FF2ACAC2E100B554C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF80FE2ACAC2E100B554C4 /* Preview Assets.xcassets */; };
+		3FFF81082ACAD72000B554C4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81072ACAD72000B554C4 /* SplashView.swift */; };
+		3FFF810A2ACAD8DA00B554C4 /* SplashViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81092ACAD8DA00B554C4 /* SplashViewModifier.swift */; };
+		3FFF810D2ACAD92F00B554C4 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF810C2ACAD92F00B554C4 /* WarningView.swift */; };
+		3FFF81112ACAD96A00B554C4 /* WarningHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81102ACAD96A00B554C4 /* WarningHeaderView.swift */; };
+		3FFF81142ACAD9AC00B554C4 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81132ACAD9AC00B554C4 /* RoundedShape.swift */; };
+		3FFF81172ACADCB600B554C4 /* StartBuildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81162ACADCB600B554C4 /* StartBuildView.swift */; };
+		3FFF811A2ACADE2B00B554C4 /* StandardButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81192ACADE2B00B554C4 /* StandardButtonStyle.swift */; };
+		3FFF811D2ACB01CD00B554C4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF811C2ACB01CD00B554C4 /* SettingsView.swift */; };
+		3FFF811F2ACB02E200B554C4 /* PelagianTanksAnalyzedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF811E2ACB02E200B554C4 /* PelagianTanksAnalyzedView.swift */; };
+		3FFF81212ACB277F00B554C4 /* PelagianHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81202ACB277F00B554C4 /* PelagianHeaderView.swift */; };
+		3FFF81242ACB27ED00B554C4 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81232ACB27ED00B554C4 /* ProgressBarView.swift */; };
+		3FFF81262ACB287B00B554C4 /* PelagianScrubbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81252ACB287B00B554C4 /* PelagianScrubbersView.swift */; };
+		3FFF81282ACB2A9100B554C4 /* PelagianAssemblyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81272ACB2A9100B554C4 /* PelagianAssemblyView.swift */; };
+		3FFF812A2ACB2BB600B554C4 /* PelagianGasAndRegsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81292ACB2BB600B554C4 /* PelagianGasAndRegsView.swift */; };
+		3FFF812C2ACB2C5F00B554C4 /* PelagianPressureTestAndPreBreatheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF812B2ACB2C5F00B554C4 /* PelagianPressureTestAndPreBreatheView.swift */; };
+		3FFF812E2ACB2CA200B554C4 /* PelagianSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF812D2ACB2CA200B554C4 /* PelagianSummaryView.swift */; };
+		3FFF81312ACB2D2C00B554C4 /* CountdownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF81302ACB2D2C00B554C4 /* CountdownTimerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F0DAAED2ACB423400914CBF /* SummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCard.swift; sourceTree = "<group>"; };
+		3F0DAAEF2ACB4C1F00914CBF /* BuildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildViewModel.swift; sourceTree = "<group>"; };
+		3F0DAAF12ACB541600914CBF /* BuildModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildModel.swift; sourceTree = "<group>"; };
+		3FFF80F42ACAC2DF00B554C4 /* PelagianCCRChecklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PelagianCCRChecklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FFF80F72ACAC2DF00B554C4 /* PelagianCCRChecklistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianCCRChecklistApp.swift; sourceTree = "<group>"; };
+		3FFF80F92ACAC2DF00B554C4 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		3FFF80FB2ACAC2E100B554C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FFF80FE2ACAC2E100B554C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3FFF81072ACAD72000B554C4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		3FFF81092ACAD8DA00B554C4 /* SplashViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModifier.swift; sourceTree = "<group>"; };
+		3FFF810C2ACAD92F00B554C4 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
+		3FFF81102ACAD96A00B554C4 /* WarningHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningHeaderView.swift; sourceTree = "<group>"; };
+		3FFF81132ACAD9AC00B554C4 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
+		3FFF81162ACADCB600B554C4 /* StartBuildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBuildView.swift; sourceTree = "<group>"; };
+		3FFF81192ACADE2B00B554C4 /* StandardButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonStyle.swift; sourceTree = "<group>"; };
+		3FFF811C2ACB01CD00B554C4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3FFF811E2ACB02E200B554C4 /* PelagianTanksAnalyzedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianTanksAnalyzedView.swift; sourceTree = "<group>"; };
+		3FFF81202ACB277F00B554C4 /* PelagianHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianHeaderView.swift; sourceTree = "<group>"; };
+		3FFF81232ACB27ED00B554C4 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		3FFF81252ACB287B00B554C4 /* PelagianScrubbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianScrubbersView.swift; sourceTree = "<group>"; };
+		3FFF81272ACB2A9100B554C4 /* PelagianAssemblyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianAssemblyView.swift; sourceTree = "<group>"; };
+		3FFF81292ACB2BB600B554C4 /* PelagianGasAndRegsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianGasAndRegsView.swift; sourceTree = "<group>"; };
+		3FFF812B2ACB2C5F00B554C4 /* PelagianPressureTestAndPreBreatheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianPressureTestAndPreBreatheView.swift; sourceTree = "<group>"; };
+		3FFF812D2ACB2CA200B554C4 /* PelagianSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianSummaryView.swift; sourceTree = "<group>"; };
+		3FFF81302ACB2D2C00B554C4 /* CountdownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FFF80F12ACAC2DF00B554C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F0DAAE92ACB3BC400914CBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF81162ACADCB600B554C4 /* StartBuildView.swift */,
+				3FFF811E2ACB02E200B554C4 /* PelagianTanksAnalyzedView.swift */,
+				3FFF81252ACB287B00B554C4 /* PelagianScrubbersView.swift */,
+				3FFF81272ACB2A9100B554C4 /* PelagianAssemblyView.swift */,
+				3FFF81292ACB2BB600B554C4 /* PelagianGasAndRegsView.swift */,
+				3FFF812B2ACB2C5F00B554C4 /* PelagianPressureTestAndPreBreatheView.swift */,
+				3FFF812D2ACB2CA200B554C4 /* PelagianSummaryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3F0DAAEA2ACB3BF100914CBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F0DAAF12ACB541600914CBF /* BuildModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F0DAAEB2ACB3BFD00914CBF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F0DAAEF2ACB4C1F00914CBF /* BuildViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3F0DAAEC2ACB422200914CBF /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				3F0DAAED2ACB423400914CBF /* SummaryCard.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		3FFF80EB2ACAC2DF00B554C4 = {
+			isa = PBXGroup;
+			children = (
+				3FFF80F62ACAC2DF00B554C4 /* PelagianCCRChecklist */,
+				3FFF80F52ACAC2DF00B554C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FFF80F52ACAC2DF00B554C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF80F42ACAC2DF00B554C4 /* PelagianCCRChecklist.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FFF80F62ACAC2DF00B554C4 /* PelagianCCRChecklist */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF810B2ACAD91A00B554C4 /* Warning */,
+				3FFF81062ACAD70800B554C4 /* SplashScreen */,
+				3FFF81052ACAD6E800B554C4 /* Core */,
+				3FFF80F72ACAC2DF00B554C4 /* PelagianCCRChecklistApp.swift */,
+				3FFF80F92ACAC2DF00B554C4 /* MainTabView.swift */,
+				3FFF80FB2ACAC2E100B554C4 /* Assets.xcassets */,
+				3FFF80FD2ACAC2E100B554C4 /* Preview Content */,
+			);
+			path = PelagianCCRChecklist;
+			sourceTree = "<group>";
+		};
+		3FFF80FD2ACAC2E100B554C4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF80FE2ACAC2E100B554C4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3FFF81052ACAD6E800B554C4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF81152ACADC9A00B554C4 /* Build */,
+				3FFF811B2ACB01B700B554C4 /* Settings */,
+				3FFF810E2ACAD93900B554C4 /* Components */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3FFF81062ACAD70800B554C4 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF81072ACAD72000B554C4 /* SplashView.swift */,
+				3FFF81092ACAD8DA00B554C4 /* SplashViewModifier.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		3FFF810B2ACAD91A00B554C4 /* Warning */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF810C2ACAD92F00B554C4 /* WarningView.swift */,
+			);
+			path = Warning;
+			sourceTree = "<group>";
+		};
+		3FFF810E2ACAD93900B554C4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3F0DAAEC2ACB422200914CBF /* Cards */,
+				3FFF812F2ACB2D1F00B554C4 /* Timers */,
+				3FFF81222ACB27DE00B554C4 /* ProgressBar */,
+				3FFF81182ACADE1F00B554C4 /* Buttons */,
+				3FFF81122ACAD99A00B554C4 /* Modifiers */,
+				3FFF810F2ACAD94A00B554C4 /* Headers */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3FFF810F2ACAD94A00B554C4 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF81102ACAD96A00B554C4 /* WarningHeaderView.swift */,
+				3FFF81202ACB277F00B554C4 /* PelagianHeaderView.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		3FFF81122ACAD99A00B554C4 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF81132ACAD9AC00B554C4 /* RoundedShape.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		3FFF81152ACADC9A00B554C4 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				3F0DAAEB2ACB3BFD00914CBF /* ViewModel */,
+				3F0DAAEA2ACB3BF100914CBF /* Model */,
+				3F0DAAE92ACB3BC400914CBF /* Views */,
+			);
+			path = Build;
+			sourceTree = "<group>";
+		};
+		3FFF81182ACADE1F00B554C4 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF81192ACADE2B00B554C4 /* StandardButtonStyle.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		3FFF811B2ACB01B700B554C4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF811C2ACB01CD00B554C4 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3FFF81222ACB27DE00B554C4 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF81232ACB27ED00B554C4 /* ProgressBarView.swift */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		3FFF812F2ACB2D1F00B554C4 /* Timers */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF81302ACB2D2C00B554C4 /* CountdownTimerView.swift */,
+			);
+			path = Timers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FFF80F32ACAC2DF00B554C4 /* PelagianCCRChecklist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FFF81022ACAC2E100B554C4 /* Build configuration list for PBXNativeTarget "PelagianCCRChecklist" */;
+			buildPhases = (
+				3FFF80F02ACAC2DF00B554C4 /* Sources */,
+				3FFF80F12ACAC2DF00B554C4 /* Frameworks */,
+				3FFF80F22ACAC2DF00B554C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PelagianCCRChecklist;
+			productName = PelagianCCRChecklist;
+			productReference = 3FFF80F42ACAC2DF00B554C4 /* PelagianCCRChecklist.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FFF80EC2ACAC2DF00B554C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					3FFF80F32ACAC2DF00B554C4 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 3FFF80EF2ACAC2DF00B554C4 /* Build configuration list for PBXProject "PelagianCCRChecklist" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FFF80EB2ACAC2DF00B554C4;
+			productRefGroup = 3FFF80F52ACAC2DF00B554C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FFF80F32ACAC2DF00B554C4 /* PelagianCCRChecklist */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FFF80F22ACAC2DF00B554C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FFF80FF2ACAC2E100B554C4 /* Preview Assets.xcassets in Resources */,
+				3FFF80FC2ACAC2E100B554C4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FFF80F02ACAC2DF00B554C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0DAAEE2ACB423400914CBF /* SummaryCard.swift in Sources */,
+				3FFF811A2ACADE2B00B554C4 /* StandardButtonStyle.swift in Sources */,
+				3FFF811F2ACB02E200B554C4 /* PelagianTanksAnalyzedView.swift in Sources */,
+				3FFF812A2ACB2BB600B554C4 /* PelagianGasAndRegsView.swift in Sources */,
+				3FFF81312ACB2D2C00B554C4 /* CountdownTimerView.swift in Sources */,
+				3FFF81112ACAD96A00B554C4 /* WarningHeaderView.swift in Sources */,
+				3FFF81142ACAD9AC00B554C4 /* RoundedShape.swift in Sources */,
+				3FFF810A2ACAD8DA00B554C4 /* SplashViewModifier.swift in Sources */,
+				3FFF810D2ACAD92F00B554C4 /* WarningView.swift in Sources */,
+				3FFF811D2ACB01CD00B554C4 /* SettingsView.swift in Sources */,
+				3FFF81262ACB287B00B554C4 /* PelagianScrubbersView.swift in Sources */,
+				3FFF80FA2ACAC2DF00B554C4 /* MainTabView.swift in Sources */,
+				3FFF81212ACB277F00B554C4 /* PelagianHeaderView.swift in Sources */,
+				3FFF80F82ACAC2DF00B554C4 /* PelagianCCRChecklistApp.swift in Sources */,
+				3FFF81082ACAD72000B554C4 /* SplashView.swift in Sources */,
+				3FFF81242ACB27ED00B554C4 /* ProgressBarView.swift in Sources */,
+				3F0DAAF02ACB4C1F00914CBF /* BuildViewModel.swift in Sources */,
+				3FFF812E2ACB2CA200B554C4 /* PelagianSummaryView.swift in Sources */,
+				3F0DAAF22ACB541600914CBF /* BuildModel.swift in Sources */,
+				3FFF81282ACB2A9100B554C4 /* PelagianAssemblyView.swift in Sources */,
+				3FFF81172ACADCB600B554C4 /* StartBuildView.swift in Sources */,
+				3FFF812C2ACB2C5F00B554C4 /* PelagianPressureTestAndPreBreatheView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3FFF81002ACAC2E100B554C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FFF81012ACAC2E100B554C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FFF81032ACAC2E100B554C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PelagianCCRChecklist/Preview Content\"";
+				DEVELOPMENT_TEAM = BV862H23C8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andy.PelagianCCRChecklist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FFF81042ACAC2E100B554C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PelagianCCRChecklist/Preview Content\"";
+				DEVELOPMENT_TEAM = BV862H23C8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andy.PelagianCCRChecklist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FFF80EF2ACAC2DF00B554C4 /* Build configuration list for PBXProject "PelagianCCRChecklist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FFF81002ACAC2E100B554C4 /* Debug */,
+				3FFF81012ACAC2E100B554C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FFF81022ACAC2E100B554C4 /* Build configuration list for PBXNativeTarget "PelagianCCRChecklist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FFF81032ACAC2E100B554C4 /* Debug */,
+				3FFF81042ACAC2E100B554C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FFF80EC2ACAC2DF00B554C4 /* Project object */;
+}
