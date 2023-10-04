@@ -18,14 +18,18 @@ class AppViewModel: ObservableObject {
     
     // Add a computed property to check if all steps are completed
     var areAllStepsCompleted: Bool {
-        return tanksAnalyzedViewModel.startingO2 != nil &&
-            tanksAnalyzedViewModel.startingDiluent != nil &&
-            tanksAnalyzedViewModel.startingBailout != nil &&
+        return 
+            !tanksAnalyzedViewModel.startingO2.isEmpty &&
+            !tanksAnalyzedViewModel.startingDiluent.isEmpty &&
+            !tanksAnalyzedViewModel.startingBailout.isEmpty &&
             scrubbersViewModel.isScrubberFilledChecked &&
-            scrubbersViewModel.timeRemaining != nil &&
+            !scrubbersViewModel.timeRemaining.isEmpty &&
             assemblyViewModel.isBatteryTestedChecked &&
             assemblyViewModel.isAirCalibrationChecked &&
 //            assemblyViewModel.isHoseChecked &&
+            !assemblyViewModel.cellOneReading.isEmpty &&
+            !assemblyViewModel.cellTwoReading.isEmpty &&
+            !assemblyViewModel.cellThreeReading.isEmpty &&
             assemblyViewModel.isMushroomValvesChecked &&
             assemblyViewModel.isPConInhaleChecked &&
             assemblyViewModel.isPConExhaleChecked &&
@@ -33,10 +37,10 @@ class AppViewModel: ObservableObject {
             assemblyViewModel.isCo2PipeChecked &&
             assemblyViewModel.isTandPChecked &&
             assemblyViewModel.isUnitAssembledChecked &&
-            gasAndRegsViewModel.o2Pressure != nil &&
-            gasAndRegsViewModel.diluentPressure != nil &&
-            gasAndRegsViewModel.bailoutPressure != nil &&
-            gasAndRegsViewModel.flowRate != nil &&
+            !gasAndRegsViewModel.o2Pressure.isEmpty &&
+            !gasAndRegsViewModel.diluentPressure.isEmpty &&
+            !gasAndRegsViewModel.bailoutPressure.isEmpty &&
+            !gasAndRegsViewModel.flowRate.isEmpty &&
             gasAndRegsViewModel.isO2FeedChecked &&
             gasAndRegsViewModel.isADVChecked &&
             gasAndRegsViewModel.isBailoutRegChecked &&
@@ -51,19 +55,19 @@ class AppViewModel: ObservableObject {
     // Add a computed property to get incomplete steps
     var incompleteSteps: [Int] {
         var steps: [Int] = []
-        if tanksAnalyzedViewModel.startingO2 == nil {
+        if tanksAnalyzedViewModel.startingO2.isEmpty {
             steps.append(1)
         }
-        if tanksAnalyzedViewModel.startingDiluent == nil {
+        if tanksAnalyzedViewModel.startingDiluent.isEmpty {
             steps.append(2)
         }
-        if tanksAnalyzedViewModel.startingBailout == nil {
+        if tanksAnalyzedViewModel.startingBailout.isEmpty {
             steps.append(3)
         }
         if !scrubbersViewModel.isScrubberFilledChecked {
             steps.append(4)
         }
-        if scrubbersViewModel.timeRemaining == nil {
+        if scrubbersViewModel.timeRemaining.isEmpty {
             steps.append(5)
         }
         if !assemblyViewModel.isBatteryTestedChecked {
@@ -72,75 +76,82 @@ class AppViewModel: ObservableObject {
         if !assemblyViewModel.isAirCalibrationChecked {
             steps.append(7)
         }
-//        if !assemblyViewModel.isHoseChecked {
-//            steps.append(8)
-//        }
-        if !assemblyViewModel.isMushroomValvesChecked {
+        if assemblyViewModel.cellOneReading.isEmpty {
+            steps.append(8)
+        }
+        if assemblyViewModel.cellTwoReading.isEmpty {
             steps.append(9)
         }
-        if !assemblyViewModel.isPConInhaleChecked {
+        if assemblyViewModel.cellThreeReading.isEmpty {
             steps.append(10)
         }
-        if !assemblyViewModel.isPConExhaleChecked {
+        
+        if !assemblyViewModel.isMushroomValvesChecked {
             steps.append(11)
         }
-        if !assemblyViewModel.isORingChecked {
+        if !assemblyViewModel.isPConInhaleChecked {
             steps.append(12)
         }
-        if !assemblyViewModel.isCo2PipeChecked {
+        if !assemblyViewModel.isPConExhaleChecked {
             steps.append(13)
         }
-        if !assemblyViewModel.isTandPChecked {
+        if !assemblyViewModel.isORingChecked {
             steps.append(14)
         }
-        if !assemblyViewModel.isUnitAssembledChecked {
+        if !assemblyViewModel.isCo2PipeChecked {
             steps.append(15)
         }
-        if gasAndRegsViewModel.o2Pressure == nil {
+        if !assemblyViewModel.isTandPChecked {
             steps.append(16)
         }
-        if gasAndRegsViewModel.diluentPressure == nil {
+        if !assemblyViewModel.isUnitAssembledChecked {
             steps.append(17)
         }
-        if gasAndRegsViewModel.bailoutPressure == nil {
+        if gasAndRegsViewModel.o2Pressure.isEmpty {
             steps.append(18)
         }
-        if gasAndRegsViewModel.flowRate == nil {
+        if gasAndRegsViewModel.diluentPressure.isEmpty {
             steps.append(19)
         }
-        if !gasAndRegsViewModel.isO2FeedChecked {
+        if gasAndRegsViewModel.bailoutPressure.isEmpty {
             steps.append(20)
         }
-        if !gasAndRegsViewModel.isADVChecked {
+        if gasAndRegsViewModel.flowRate.isEmpty {
             steps.append(21)
         }
-        if !gasAndRegsViewModel.isBailoutRegChecked {
+        if !gasAndRegsViewModel.isO2FeedChecked {
             steps.append(22)
         }
-        if !gasAndRegsViewModel.isO2FeedGuageChecked {
+        if !gasAndRegsViewModel.isADVChecked {
             steps.append(23)
         }
-        if !gasAndRegsViewModel.isADVGuageChecked {
+        if !gasAndRegsViewModel.isBailoutRegChecked {
             steps.append(24)
         }
-        if !gasAndRegsViewModel.isBailoutRegGuageChecked {
+        if !gasAndRegsViewModel.isO2FeedGuageChecked {
             steps.append(25)
         }
-        if !pressTestAndPreBreatheViewModel.isPosTestChecked {
+        if !gasAndRegsViewModel.isADVGuageChecked {
             steps.append(26)
         }
-        if !pressTestAndPreBreatheViewModel.isNegTestChecked {
+        if !gasAndRegsViewModel.isBailoutRegGuageChecked {
             steps.append(27)
         }
-        if !pressTestAndPreBreatheViewModel.isPrebreatheChecked {
+        if !pressTestAndPreBreatheViewModel.isPosTestChecked {
             steps.append(28)
+        }
+        if !pressTestAndPreBreatheViewModel.isNegTestChecked {
+            steps.append(29)
+        }
+        if !pressTestAndPreBreatheViewModel.isPrebreatheChecked {
+            steps.append(30)
         }
         return steps
     }
     
     var completedSteps: [Int] {
         var completed: [Int] = []
-        for step in 1...28 {
+        for step in 1...30 {
             if !incompleteSteps.contains(step) {
                 completed.append(step)
             }
@@ -151,11 +162,11 @@ class AppViewModel: ObservableObject {
 
 // ViewModel for Tanks Analyzed View
 class TanksAnalyzedViewModel: ObservableObject {
-    @Published var startingO2: Double
-    @Published var startingDiluent: Double
-    @Published var startingBailout: Double
+    @Published var startingO2: String = ""
+    @Published var startingDiluent: String = ""
+    @Published var startingBailout: String = ""
     
-    init(startingO2: Double = 0.0, startingDiluent: Double = 0.0, startingBailout: Double = 0.0) {
+    init(startingO2: String = "", startingDiluent: String = "", startingBailout: String = "") {
         self.startingO2 = startingO2
         self.startingDiluent = startingDiluent
         self.startingBailout = startingBailout
@@ -166,9 +177,9 @@ class TanksAnalyzedViewModel: ObservableObject {
 // ViewModel for Scrubbers View
 class ScrubbersViewModel: ObservableObject {
     @Published var isScrubberFilledChecked: Bool = false
-    @Published var timeRemaining: Int
+    @Published var timeRemaining: String = ""
     
-    init(timeRemaining: Int = 0) {
+    init(timeRemaining: String = "") {
         self.timeRemaining = timeRemaining
     }
 
@@ -187,11 +198,11 @@ class AssemblyViewModel: ObservableObject {
     @Published var isTandPChecked: Bool =  false
     @Published var isUnitAssembledChecked: Bool =  false
     
-    @Published var cellOneReading: Double
-    @Published var cellTwoReading: Double
-    @Published var cellThreeReading: Double
+    @Published var cellOneReading: String = "0"
+    @Published var cellTwoReading: String = "0"
+    @Published var cellThreeReading: String = "0"
     
-    init(cellOneReading: Double = 0.0, cellTwoReading: Double = 0.0, cellThreeReading: Double = 0.0) {
+    init(cellOneReading: String = "", cellTwoReading: String = "", cellThreeReading: String = "") {
         self.cellOneReading = cellOneReading
         self.cellTwoReading = cellTwoReading
         self.cellThreeReading = cellThreeReading
@@ -200,10 +211,10 @@ class AssemblyViewModel: ObservableObject {
 
 // ViewModel for Gas and Regs View
 class GasAndRegsViewModel: ObservableObject {
-    @Published var o2Pressure: Int
-    @Published var diluentPressure: Int
-    @Published var bailoutPressure: Int
-    @Published var flowRate: Int
+    @Published var o2Pressure: String = ""
+    @Published var diluentPressure: String = ""
+    @Published var bailoutPressure: String = ""
+    @Published var flowRate: String = ""
     @Published var isO2FeedChecked: Bool = false
     @Published var isADVChecked: Bool = false
     @Published var isBailoutRegChecked: Bool = false
@@ -211,7 +222,7 @@ class GasAndRegsViewModel: ObservableObject {
     @Published var isADVGuageChecked: Bool = false
     @Published var isBailoutRegGuageChecked: Bool = false
     
-    init(o2Pressure: Int = 0, diluentPressure: Int = 0, bailoutPressure: Int = 0, flowRate: Int = 0) {
+    init(o2Pressure: String = "", diluentPressure: String = "", bailoutPressure: String = "", flowRate: String = "") {
         self.o2Pressure = o2Pressure
         self.diluentPressure = diluentPressure
         self.bailoutPressure = bailoutPressure

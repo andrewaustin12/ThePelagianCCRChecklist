@@ -40,6 +40,6 @@ struct SummaryCard: View {
 
 
 
-#Preview {
-    SummaryCard(isComplete: true, step: "All steps completed!")
-}
+//#Preview {
+//    SummaryCard(isComplete: true, step: "All steps completed!")
+//}

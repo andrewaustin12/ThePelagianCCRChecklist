@@ -1,94 +1,13 @@
-//
-//  BuildView2.swift
-//  PelagianCCRChecklist
-//
-//  Created by andrew austin on 10/2/23.
-//
-
-import SwiftUI
-
-//struct PelagianTanksAnalyzedView: View {
-//    
-//    @ObservedObject var viewModel: TanksAnalyzedViewModel
-//    @ObservedObject var scrubberViewModel: ScrubbersViewModel
-////    @Binding var summaryData: SummaryData
-//    
-//    var body: some View {
-//        NavigationStack {
-//            
-//            VStack(alignment: .leading) {
-//                PelagianHeaderView(title: "Analyze Tanks")
-//                    
-//                ProgressBarView(progress: Double((350/5) * 0.1))
-//                    .padding(.leading)
-//
-//                List {
-//                    Section {
-//                        HStack() {
-//                            Text("Enter 02")
-//                            Spacer()
-//                            TextField("PP02",
-//                                      value: $viewModel.startingO2,
-//                                      formatter: NumberFormatter())
-//                            .keyboardType(.numberPad)
-//                            .frame(width: 80)
-//                            .textFieldStyle(RoundedBorderTextFieldStyle())
-//                        }
-//                        
-//                        
-//                        HStack() {
-//                            Text("Diluent")
-//                            Spacer()
-//                            TextField("PP02",
-//                                      value: $viewModel.startingDiluent,
-//                                      formatter: NumberFormatter())
-//                            .keyboardType(.numberPad)
-//                            .frame(width: 80)
-//                            .textFieldStyle(RoundedBorderTextFieldStyle())
-//                        }
-//                        
-//                        HStack() {
-//                            Text("Bailout Gas")
-//                            Spacer()
-//                            TextField("PP02",
-//                                      value: $viewModel.startingBailout,
-//                                      formatter: NumberFormatter())
-//                            .keyboardType(.numberPad)
-//                            .frame(width: 80)
-//                            .textFieldStyle(RoundedBorderTextFieldStyle())
-//                        }
-//                    } header: {
-//                        Text("Steps 1 -4 ")
-//                    }
-//                }
-//            }
-//            NavigationLink {
-//                PelagianScrubbersView(viewModel: ScrubbersViewModel)
-//            } label: {
-//                Text("Next")
-//                    .font(.title)
-//                    .bold()
-//            }
-//            .modifier(StandardButtonStyle())
-//            .toolbar {
-//                ToolbarItem(placement: .topBarTrailing) {
-//                    NavigationLink {
-//                        MainTabView()
-//                    } label: {
-//                        Image(systemName: "house")
-//                    }
-//                }
-//            }
-//        }
-//        
-//    }
-//}
-
 import SwiftUI
 
 struct PelagianTanksAnalyzedView: View {
     
     @ObservedObject var appViewModel: AppViewModel
+    @FocusState private var focusedTextField: FormTextField?
+    
+    enum FormTextField {
+        case starting02, startingDiluent, startingBailout
+    }
     
     var body: some View {
         NavigationStack {
@@ -105,8 +24,10 @@ struct PelagianTanksAnalyzedView: View {
                             Text("Enter O2 PP02")
                             Spacer()
                             TextField("PP02",
-                                      value: $appViewModel.tanksAnalyzedViewModel.startingO2,
-                                      formatter: NumberFormatter())
+                                      text: $appViewModel.tanksAnalyzedViewModel.startingO2)
+                            .focused($focusedTextField, equals: .starting02)
+                            .onSubmit {focusedTextField = .startingDiluent}
+                            .submitLabel(.next)
                             .keyboardType(.numberPad)
                             .frame(width: 80)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -118,8 +39,10 @@ struct PelagianTanksAnalyzedView: View {
                             Text("Diluent PP02")
                             Spacer()
                             TextField("PP02",
-                                      value: $appViewModel.tanksAnalyzedViewModel.startingDiluent,
-                                      formatter: NumberFormatter())
+                                      text: $appViewModel.tanksAnalyzedViewModel.startingDiluent)
+                            .focused($focusedTextField, equals: .startingDiluent)
+                            .onSubmit {focusedTextField = .startingBailout }
+                            .submitLabel(.next)
                             .keyboardType(.numberPad)
                             .frame(width: 80)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -130,8 +53,10 @@ struct PelagianTanksAnalyzedView: View {
                             Text("Bailout Gas PP02")
                             Spacer()
                             TextField("PP02",
-                                      value: $appViewModel.tanksAnalyzedViewModel.startingBailout,
-                                      formatter: NumberFormatter())
+                                      text: $appViewModel.tanksAnalyzedViewModel.startingBailout)
+                            .focused($focusedTextField, equals: .startingBailout)
+                            .onSubmit {focusedTextField = nil }
+                            .submitLabel(.done)
                             .keyboardType(.numberPad)
                             .frame(width: 80)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -141,7 +66,13 @@ struct PelagianTanksAnalyzedView: View {
                         Text("Steps 1 - 3 ")
                     }
                 }
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Button("Dismiss") { focusedTextField = nil }
+                    }
+                }
             }
+            
             NavigationLink {
                 PelagianScrubbersView(appViewModel: appViewModel)
             } label: {

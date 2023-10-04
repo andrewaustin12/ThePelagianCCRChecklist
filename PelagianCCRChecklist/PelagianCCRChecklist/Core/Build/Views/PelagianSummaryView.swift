@@ -8,51 +8,52 @@ struct PelagianSummaryView: View {
             VStack {
                 if appViewModel.areAllStepsCompleted {
                     SummaryCard(isComplete: true, step: "All steps complete!")
-                        .padding()
-                    
-                    Form{
-                        VStack {
-                            Text("O2")
-                                .font(.title3)
-                            HStack{
-                                Text("PP02: \(appViewModel.tanksAnalyzedViewModel.startingO2)")
-                                    .font(.title2)
-                                Spacer()
-                                Text("Pressure: \(appViewModel.gasAndRegsViewModel.o2Pressure) Bar")
-                                    .font(.title2)
+                        .padding(.top)
+                        .padding(.bottom)
+
+                    VStack {
+                        Text("Summary of Build")
+                            .font(.largeTitle)
+                    }
+
+                    Form {
+                        
+                        Section {
+                            HStack {
+                                Text("You have \(appViewModel.scrubbersViewModel.timeRemaining) minutes remaining on your scrubber")
+                                    .font(.title3)
                             }
+                        } header: {
+                            Text("Scrubber Time")
                         }
                         
-                        HStack {
-                            Text("Diluent PP02: \(appViewModel.tanksAnalyzedViewModel.startingDiluent)")
-                                .font(.title3)
-                            Spacer()
-                            Text("Diluent Pressure: \(appViewModel.gasAndRegsViewModel.diluentPressure) Bar")
-                                .font(.title3)
-                        }
-                        
-                        HStack {
-                            Text("Bailout PP02: \(appViewModel.tanksAnalyzedViewModel.startingBailout)")
-                                .font(.title3)
-                            Spacer()
-                            Text("Diluent Pressure: \(appViewModel.gasAndRegsViewModel.bailoutPressure) Bar")
-                                .font(.title3)
-                        }
-                        
-                        HStack {
-                            Text("You have \(appViewModel.scrubbersViewModel.timeRemaining) minutes remaining on your scrubber")
-                                .font(.title2)
+                        Section(header: Text("Gas Readings")) {
+                            VStack {
+                                SummaryGasCard(title: "Oxygen", startingPP02: appViewModel.tanksAnalyzedViewModel.startingO2, startingPressure: appViewModel.gasAndRegsViewModel.o2Pressure)
+
+                                SummaryGasCard(title: "Diluent", startingPP02: appViewModel.tanksAnalyzedViewModel.startingDiluent, startingPressure: appViewModel.gasAndRegsViewModel.diluentPressure)
+
+                                SummaryGasCard(title: "Bailout", startingPP02: appViewModel.tanksAnalyzedViewModel.startingBailout, startingPressure: appViewModel.gasAndRegsViewModel.bailoutPressure)
+                                
+                                Text("Your Flow Rate is set to \(appViewModel.gasAndRegsViewModel.flowRate) turns.")
+                                    .font(.title3)
+                            }
+
                             
                         }
+
+                        Section(header: Text("Cell Readings")) {
+                            VStack {
+                                Summary02CellsView(cell1: appViewModel.assemblyViewModel.cellOneReading, cell2: appViewModel.assemblyViewModel.cellTwoReading, cell3: appViewModel.assemblyViewModel.cellThreeReading)
+                            }
+                        }
                     }
-                    
-                    
-                    
+
                 } else {
                     Text("Some steps are not completed:")
                         .font(.title)
                         .bold()
-                    
+
                     ScrollView {
                         Section {
                             ForEach(appViewModel.incompleteSteps, id: \.self) { step in
@@ -63,7 +64,7 @@ struct PelagianSummaryView: View {
                 }
             }
             .padding(.bottom)
-            
+
             NavigationLink("Finish") {
                 MainTabView()
             }
@@ -72,7 +73,7 @@ struct PelagianSummaryView: View {
             .modifier(StandardButtonStyle())
             .disabled(!appViewModel.areAllStepsCompleted)
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .primaryAction) {
                     NavigationLink {
                         MainTabView()
                     } label: {
@@ -83,12 +84,3 @@ struct PelagianSummaryView: View {
         }
     }
 }
-
-
-struct PelagianSummaryView_Previews: PreviewProvider {
-    static var previews: some View {
-        let appViewModel = AppViewModel()
-        return PelagianSummaryView(appViewModel: appViewModel)
-    }
-}
-

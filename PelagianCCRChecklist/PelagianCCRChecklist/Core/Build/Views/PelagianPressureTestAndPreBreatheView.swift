@@ -51,7 +51,7 @@ struct PelagianPressureTestAndPreBreatheView: View {
                     } header: {
                         Text("Steps 28 - 30")
                     }
-
+                    .toggleStyle(SwitchToggleStyle(tint: .unitPrimary))
                 }
             }
             NavigationLink("Next") {

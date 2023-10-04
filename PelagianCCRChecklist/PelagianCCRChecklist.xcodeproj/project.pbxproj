@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		3F0DAAEE2ACB423400914CBF /* SummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DAAED2ACB423400914CBF /* SummaryCard.swift */; };
 		3F0DAAF02ACB4C1F00914CBF /* BuildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DAAEF2ACB4C1F00914CBF /* BuildViewModel.swift */; };
-		3F0DAAF22ACB541600914CBF /* BuildModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DAAF12ACB541600914CBF /* BuildModel.swift */; };
+		3F0DAAF42ACD38F200914CBF /* SummaryGasCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DAAF32ACD38F200914CBF /* SummaryGasCard.swift */; };
+		3F0DAAF62ACD404700914CBF /* Summary02CellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DAAF52ACD404700914CBF /* Summary02CellsView.swift */; };
+		3F0DAAF82ACD6CF400914CBF /* NumbersOnlyViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DAAF72ACD6CF400914CBF /* NumbersOnlyViewModifier.swift */; };
+		3F0DAAFA2ACD7C4F00914CBF /* SummaryFlowRateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DAAF92ACD7C4F00914CBF /* SummaryFlowRateCard.swift */; };
 		3FFF80F82ACAC2DF00B554C4 /* PelagianCCRChecklistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF80F72ACAC2DF00B554C4 /* PelagianCCRChecklistApp.swift */; };
 		3FFF80FA2ACAC2DF00B554C4 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF80F92ACAC2DF00B554C4 /* MainTabView.swift */; };
 		3FFF80FC2ACAC2E100B554C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF80FB2ACAC2E100B554C4 /* Assets.xcassets */; };
@@ -36,7 +39,10 @@
 /* Begin PBXFileReference section */
 		3F0DAAED2ACB423400914CBF /* SummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCard.swift; sourceTree = "<group>"; };
 		3F0DAAEF2ACB4C1F00914CBF /* BuildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildViewModel.swift; sourceTree = "<group>"; };
-		3F0DAAF12ACB541600914CBF /* BuildModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildModel.swift; sourceTree = "<group>"; };
+		3F0DAAF32ACD38F200914CBF /* SummaryGasCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryGasCard.swift; sourceTree = "<group>"; };
+		3F0DAAF52ACD404700914CBF /* Summary02CellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary02CellsView.swift; sourceTree = "<group>"; };
+		3F0DAAF72ACD6CF400914CBF /* NumbersOnlyViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersOnlyViewModifier.swift; sourceTree = "<group>"; };
+		3F0DAAF92ACD7C4F00914CBF /* SummaryFlowRateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryFlowRateCard.swift; sourceTree = "<group>"; };
 		3FFF80F42ACAC2DF00B554C4 /* PelagianCCRChecklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PelagianCCRChecklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFF80F72ACAC2DF00B554C4 /* PelagianCCRChecklistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianCCRChecklistApp.swift; sourceTree = "<group>"; };
 		3FFF80F92ACAC2DF00B554C4 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -86,14 +92,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		3F0DAAEA2ACB3BF100914CBF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				3F0DAAF12ACB541600914CBF /* BuildModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		3F0DAAEB2ACB3BFD00914CBF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				3F0DAAED2ACB423400914CBF /* SummaryCard.swift */,
+				3F0DAAF32ACD38F200914CBF /* SummaryGasCard.swift */,
+				3F0DAAF52ACD404700914CBF /* Summary02CellsView.swift */,
+				3F0DAAF92ACD7C4F00914CBF /* SummaryFlowRateCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -201,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				3FFF81132ACAD9AC00B554C4 /* RoundedShape.swift */,
+				3F0DAAF72ACD6CF400914CBF /* NumbersOnlyViewModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -209,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				3F0DAAEB2ACB3BFD00914CBF /* ViewModel */,
-				3F0DAAEA2ACB3BF100914CBF /* Model */,
 				3F0DAAE92ACB3BC400914CBF /* Views */,
 			);
 			path = Build;
@@ -319,25 +320,28 @@
 			files = (
 				3F0DAAEE2ACB423400914CBF /* SummaryCard.swift in Sources */,
 				3FFF811A2ACADE2B00B554C4 /* StandardButtonStyle.swift in Sources */,
+				3F0DAAF42ACD38F200914CBF /* SummaryGasCard.swift in Sources */,
 				3FFF811F2ACB02E200B554C4 /* PelagianTanksAnalyzedView.swift in Sources */,
 				3FFF812A2ACB2BB600B554C4 /* PelagianGasAndRegsView.swift in Sources */,
 				3FFF81312ACB2D2C00B554C4 /* CountdownTimerView.swift in Sources */,
 				3FFF81112ACAD96A00B554C4 /* WarningHeaderView.swift in Sources */,
 				3FFF81142ACAD9AC00B554C4 /* RoundedShape.swift in Sources */,
 				3FFF810A2ACAD8DA00B554C4 /* SplashViewModifier.swift in Sources */,
+				3F0DAAF62ACD404700914CBF /* Summary02CellsView.swift in Sources */,
 				3FFF810D2ACAD92F00B554C4 /* WarningView.swift in Sources */,
 				3FFF811D2ACB01CD00B554C4 /* SettingsView.swift in Sources */,
 				3FFF81262ACB287B00B554C4 /* PelagianScrubbersView.swift in Sources */,
 				3FFF80FA2ACAC2DF00B554C4 /* MainTabView.swift in Sources */,
 				3FFF81212ACB277F00B554C4 /* PelagianHeaderView.swift in Sources */,
+				3F0DAAF82ACD6CF400914CBF /* NumbersOnlyViewModifier.swift in Sources */,
 				3FFF80F82ACAC2DF00B554C4 /* PelagianCCRChecklistApp.swift in Sources */,
 				3FFF81082ACAD72000B554C4 /* SplashView.swift in Sources */,
 				3FFF81242ACB27ED00B554C4 /* ProgressBarView.swift in Sources */,
 				3F0DAAF02ACB4C1F00914CBF /* BuildViewModel.swift in Sources */,
 				3FFF812E2ACB2CA200B554C4 /* PelagianSummaryView.swift in Sources */,
-				3F0DAAF22ACB541600914CBF /* BuildModel.swift in Sources */,
 				3FFF81282ACB2A9100B554C4 /* PelagianAssemblyView.swift in Sources */,
 				3FFF81172ACADCB600B554C4 /* StartBuildView.swift in Sources */,
+				3F0DAAFA2ACD7C4F00914CBF /* SummaryFlowRateCard.swift in Sources */,
 				3FFF812C2ACB2C5F00B554C4 /* PelagianPressureTestAndPreBreatheView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
