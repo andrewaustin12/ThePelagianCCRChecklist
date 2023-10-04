@@ -115,6 +115,7 @@ struct PelagianAssemblyView: View {
             }
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
                     Button("Dismiss") { focusedTextField = nil }
                 }
             }

@@ -60,6 +60,7 @@ struct PelagianScrubbersView: View {
                     }
                 }
                 ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
                     Button("Dismiss") { focusedTextField = nil }
                 }
             }

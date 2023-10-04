@@ -68,6 +68,7 @@ struct PelagianTanksAnalyzedView: View {
                 }
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
                         Button("Dismiss") { focusedTextField = nil }
                     }
                 }
